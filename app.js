@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .catch((err) => {
         console.error('MongoDB connection failed:', err.message);
     });
-app.use(express.static(path.join(__dirname+'/dist/Frontend')));
+app.use(express.static(__dirname));
 // Task2: create mongoDB connection 
 
 
@@ -128,7 +128,7 @@ app.put('/api/employeelist', async (req, res) => {
 //! dont delete this code. it connects the front end file.
 
 app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, 'dist', 'Frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html));
 });
 
 
