@@ -130,7 +130,7 @@ app.put('/api/employeelist', async (req, res) => {
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, 'dist', 'Frontend', 'index.html'));
 });
-});
+
 
 
 app.listen(3000, () => {
